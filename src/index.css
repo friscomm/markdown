@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+.sectionHolder {
+
+
+}
+
+#onLeft {
+  border: 5px solid blue;
+  float: left;
+  margin-left: 95px;
+}
+
+#onRight {
+  border: 5px solid green;
+  float: right;
+  margin-right: 95px;
+}
