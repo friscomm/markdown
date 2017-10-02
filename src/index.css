@@ -19,4 +19,6 @@ body {
   border: 5px solid green;
   float: right;
   margin-right: 95px;
+  width: 400px;
+  height: 500px;
 }
