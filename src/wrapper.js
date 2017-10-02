@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import InputBox from './inputBox.js';
+let Remarkable = require('remarkable');
+let md = new Remarkable();
 
 class Wrapper extends Component {
   constructor(props) {
@@ -8,8 +10,12 @@ class Wrapper extends Component {
     this.changeText = this.changeText.bind(this);
   }
 
+  getMarkdown() {
+    let markedText = { __html: md.render(this.state.value) };
+    return markedText;
+  }
+
   changeText(newText) {
-    console.log(newText);
     this.setState({
       value: newText
     });
@@ -19,7 +25,7 @@ class Wrapper extends Component {
     return (
       <div>
         <div id={this.props.id}>
-          <div>{this.state.value}</div>
+          <div dangerouslySetInnerHTML={this.getMarkdown()}></div>
         </div>
         <InputBox changeText={this.changeText} id='onLeft'/>
       </div>
