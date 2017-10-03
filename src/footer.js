@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return(
       <div className="App-footer">
-        <FooterIcon href="https://github.com/friscomm" />
+        <FooterIcon link="https://github.com/friscomm" name="github"/>
       </div>
     )
   }

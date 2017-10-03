@@ -13,6 +13,7 @@ class App extends Component {
         <div>
           <Wrapper id='onRight' />
         </div>
+        <Footer />
       </div>
     );
   }
